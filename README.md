@@ -6,4 +6,4 @@ OS setup scripts for personal use, forked from [caryhooper](https://github.com/c
 
 *Script for setting up a new Kali Linux VM for personal use.*
 
-Adds aliases to the root .bashrc file, updates the system and several tools, installs a few new things notably seclists, installs sublime text editor, and changes the desktop background.
+Adds aliases to the root .bashrc file, updates the system and several tools, installs a few new things notably seclists, installs sublime text editor
