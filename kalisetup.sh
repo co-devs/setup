@@ -11,6 +11,20 @@ wpscan --update;
 # echo "AutomaticLoginEnable = true\nAutomaticLogin = root" >> /etc/gdm3/daemon.conf;
 # gsettings set org.gnome.desktop.session idle-delay
 
+### Set up john
+apt install build-essential libssl-dev yasm libgmp-dev libpcap-dev libnss3-dev libkrb5-dev pkg-config libopenmpi-dev openmpi-bin zlib1g-dev libbz2-dev;
+apt install flex cmake bison git;
+cd /opt;
+git clone https://github.com/teeshop/rexgen.git;
+cd rexgen;
+./install.sh;
+ldconfig;
+cd /opt;
+git clone https://github.com/magnumripper/JohnTheRipper.git;
+cd /opt/JohnTheRipper/src/;
+./configure --enable-mpi;
+make -s clean && make -sj4;
+
 service postgresql start;
 echo "Enter new password!";
 passwd;
